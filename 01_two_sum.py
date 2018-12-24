@@ -14,7 +14,7 @@ that maps a value to its index.
 
 
 class Solution:
-    def two_sum(self, nums, target):
+    def twoSum(self, nums, target):
         """
         :type nums: List[int]
         :type target: int

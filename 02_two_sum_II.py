@@ -23,7 +23,7 @@ iii. Ai + Aj == target. We have found the answer.
 
 
 class SolutionI:
-    def two_sum_sorted(self, nums, target):
+    def twoSum(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
@@ -51,7 +51,7 @@ class SolutionI:
 
 
 class SolutionII:
-    def two_sum_sorted(self, nums, target):
+    def twoSum(self, nums, target):
         """
         Two pointers solution
         :type nums: List[int]
