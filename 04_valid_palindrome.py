@@ -12,7 +12,7 @@ A: For the purpose of this problem, we define empty string as valid palindrome.
 import re
 
 
-class Solution:
+class SolutionI:
     def isPalindrome(self, s):
         """
         :type s: str
@@ -22,7 +22,9 @@ class Solution:
         s = pattern.sub('', s.lower())
         return s == s[::-1]
 
-    def isPalindrome2(self, s):
+
+class SolutionII:
+    def isPalindrome(self, s):
         """
         Two pointers solution
         :type s: str
