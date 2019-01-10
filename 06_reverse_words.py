@@ -24,7 +24,7 @@ of a word, we append it.
 """
 
 
-class Solution(object):
+class Solution:
     def reverseWords(self, s):
         """
         :type s: str
