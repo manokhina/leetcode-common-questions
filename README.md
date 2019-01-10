@@ -9,7 +9,7 @@ Python implementation of the problems from Clean Code Handbook - LeetCode 50 Com
 6. [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)
 7. [Reverse Words in a String II](https://leetcode.com/problems/reverse-words-in-a-string-ii/)
 8. [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)
-9. [Valid Number Easy Version (There is no exact analogue on leetcode.com)](https://leetcode.com/problems/valid-number/)
+9. [Valid Number](https://leetcode.com/problems/valid-number/)
 10. []()
 11. []()
 12. []()
