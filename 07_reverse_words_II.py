@@ -56,7 +56,7 @@ class SolutionII:
             temp = s[begin + i]
             new_s[begin + i] = s[end - i - 1]
             new_s[end - i - 1] = temp
-            print("tmp ", temp)
+            # print("tmp ", temp)
             # print(''.join(new_s))
         return ''.join(new_s)
 

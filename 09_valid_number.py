@@ -56,3 +56,4 @@ class Solution:
         while i < n and s[i] == " ":
             i += 1
         return is_numeric and i == n
+

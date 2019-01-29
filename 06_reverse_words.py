@@ -24,10 +24,20 @@ of a word, we append it.
 """
 
 
-class Solution:
+class NaiveSolution:
     def reverseWords(self, s):
         """
         :type s: str
         :rtype: str
         """
         return " ".join(s.split()[::-1])
+
+
+class Solution:
+    def reverseWords(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        # TODO
+
