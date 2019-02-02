@@ -50,5 +50,5 @@ Python implementation of the problems from Clean Code Handbook - LeetCode 50 Com
 47. [Coins in a Line]()
 48. [Search Insert Position](https://leetcode.com/problems/search-insert-position/)
 49. [Find Minimum in Sorted Rotated Array]()
-50. [50. Find Minimum in Rotated Sorted Array II – with duplicates](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
+50. [Find Minimum in Rotated Sorted Array II – with duplicates](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
 
