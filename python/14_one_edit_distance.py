@@ -12,6 +12,7 @@ If m > n, we could just simply swap S and T.
 If m ≠ n, you do not have to consider the delete operation. Just consider the insert operation in T.
 """
 
+
 class Solution:
     def oneEditDistance(self, s, t):
         """
@@ -19,12 +20,6 @@ class Solution:
         :param t: str
         :return: bool
         """
-        m, n = len(s), len(t)
-        if abs(m - n) > 1:
-            return False
-        if m == n:
+        pass
 
-        elif m > n:
-            return self.oneEditDistance(t, s)
-        else:
 

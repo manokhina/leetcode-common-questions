@@ -21,22 +21,12 @@ class NaiveSolution:
         :type s: str
         :rtype: str
         """
-        i, j = 0, 2
-        result = ""
-        max_len = 0
-        while j < len(s):
-            substring = s[i:j]
-            if substring == substring[::-1] and len(substring) > max_len:
-                result = substring
-                max_len = len(result)
-                j += 1
-            else:
-                i += 1
-        return result
+        pass
 
 
 class Solution:
     # TODO
+    pass
 
 
 if __name__ == "__main__":

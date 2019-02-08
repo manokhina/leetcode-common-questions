@@ -50,14 +50,10 @@ class SolutionII:
     @staticmethod
     def reverse(s, begin, end):
         new_s = list(s)
-        # print(end, begin)
         for i in range((end - begin) // 2):
-            # print(i)
             temp = s[begin + i]
             new_s[begin + i] = s[end - i - 1]
             new_s[end - i - 1] = temp
-            # print("tmp ", temp)
-            # print(''.join(new_s))
         return ''.join(new_s)
 
 

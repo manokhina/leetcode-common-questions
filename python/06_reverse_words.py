@@ -39,5 +39,21 @@ class Solution:
         :type s: str
         :rtype: str
         """
-        # TODO
+        j = len(s)
+        reversed_str = ""
+        for i in reversed(range(len(s))):
+            if s[i] == " ":
+                j = i
+            elif i == 0 or s[i - 1] == " ":
+                if len(reversed_str) != 0:
+                    reversed_str += " "
+                    reversed_str += s[i:j]
+        return reversed_str
 
+
+if __name__ == "__main__":
+    sol1 = NaiveSolution()
+    sol2 = Solution()
+
+    print(sol1.reverseWords("the sky is blue"))
+    print(sol2.reverseWords("the sky is blue"))
