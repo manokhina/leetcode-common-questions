@@ -1,3 +1,6 @@
 .idea/*
 .DS_Store
 cpp/.idea/
+cpp/CMakeLists.txt
+cpp/cmake-build-debug/
+cpp/main.cpp
