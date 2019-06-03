@@ -20,6 +20,26 @@ class Solution:
         :param t: str
         :return: bool
         """
-        pass
+        m = len(s)
+        n = len(t)
+        if m > n:
+            return self.oneEditDistance(t, s)
+        if abs(n - m) > 1:
+            return False
+        i = 0
+        shift = n - m
+        while i < m and s[i] == t[i]:
+            i += 1
+        if i == m:
+            return shift > 0
+        if shift == 0:
+            i += 1
+        while i < m and s[i] == t[i + shift]:
+            i += 1
+        return i == m
 
+
+if __name__ == "__main__":
+    sol = Solution()
+    print(sol.oneEditDistance("ght", "ggj"))
 

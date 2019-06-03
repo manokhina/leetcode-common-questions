@@ -1,9 +1,13 @@
 # leetcode-common-questions
 Python implementation of the problems from Clean Code Handbook - LeetCode 50 Common Interview Questions
 
+**Blocked** means that the problem is available only with Leetcode Premium
+**Verified/not verified** means that the problem solution was accepted/not 
+tested by Leetcode
+
 1. [Two Sum](https://leetcode.com/problems/two-sum/)
 2. [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
-3. [Two Sum III (blocked)](https://leetcode.com/problems/two-sum-iii-data-structure-design)
+3. [Two Sum III (blocked/verified)](https://leetcode.com/problems/two-sum-iii-data-structure-design)
 4. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome)
 5. [Implement strstr()](https://leetcode.com/problems/implement-strstr/)
 6. [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)
@@ -12,11 +16,11 @@ Python implementation of the problems from Clean Code Handbook - LeetCode 50 Com
 9. [Valid Number](https://leetcode.com/problems/valid-number/)
 10. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 11. [Longest Substring with At Most Two Distinct Characters (blocked)](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters)
-12. [Missing Ranges (blocked)](https://leetcode.com/problems/missing-ranges)
+12. [Missing Ranges (blocked/verified)](https://leetcode.com/problems/missing-ranges)
 13. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
-14. [One Edit Distance (blocked)](https://leetcode.com/problems/one-edit-distance)
-15. [Read N Characters Given Read4 (blocked)](https://leetcode.com/problems/read-n-characters-given-read4)
-16. [Read N Characters Given Read4 – Call multiple times (blocked)](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times)
+14. [One Edit Distance (blocked/verified)](https://leetcode.com/problems/one-edit-distance)
+15. [Read N Characters Given Read4 (blocked/not verified)](https://leetcode.com/problems/read-n-characters-given-read4)
+16. [Read N Characters Given Read4 – Call multiple times (blocked/not verified)](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times)
 17. [Reverse Integer](https://leetcode.com/problems/reverse-integer/)
 18. [Plus One](https://leetcode.com/problems/plus-one/)
 19. [Palindrome Number](https://leetcode.com/problems/palindrome-number/)
@@ -32,7 +36,7 @@ Python implementation of the problems from Clean Code Handbook - LeetCode 50 Com
 29. [Convert Sorted Array to Balanced Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
 30. [Convert Sorted List to Balanced Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree)
 31. [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum)
-32. [Binary Tree Upside Down (blocked)](https://leetcode.com/problems/binary-tree-upside-down)
+32. [Binary Tree Upside Down (blocked/verified)](https://leetcode.com/problems/binary-tree-upside-down)
 33. [Single Number](https://leetcode.com/problems/single-number)
 34. [Single Number II](https://leetcode.com/problems/single-number-ii/)
 35. [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)

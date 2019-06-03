@@ -16,11 +16,10 @@ class TwoSum:
         self.structure = []
 
     def add(self, input):
-        if input not in self.structure:
-            self.structure.append(input)
+        self.structure.append(input)
 
     def find(self, value):
-        return self.two_sum(self.structure, value)
+        return self.twoSum(self.structure, value)
 
     @staticmethod
     def twoSum(nums, target):
@@ -36,4 +35,4 @@ class TwoSum:
                 return True  # [hash_map[complement], i]
             else:
                 hash_map[nums[i]] = i
-            return False
+        return False

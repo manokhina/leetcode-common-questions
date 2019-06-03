@@ -29,3 +29,29 @@ class NaiveSolution:
         """
         number = int(''.join([str(i) for i in digits])) + 1
         return [int(i) for i in str(number)]
+
+
+class Solution:
+    def plusOne(self, digits):
+        """
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        for i in reversed(range(len(digits))):
+            digit = digits[i]
+            if digit < 9:
+                digits[i] = digit + 1
+                return digits
+            else:
+                digits[i] = 0
+        return [1] + digits
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    test_cases = [[1, 2, 3],
+                  [0],
+                  [9, 9, 9]]
+
+    for test in test_cases:
+        print(sol.plusOne(test))

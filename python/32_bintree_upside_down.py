@@ -15,20 +15,17 @@ class TreeNode:
 
 
 class Solution:
-    def upsideDownBinaryTree(self, root):
-        """
-        :param: root
-        :return: new root
-        """
-        p = TreeNode(root)
-        parent = None
-        parent_right = None
-        while p is not None:
-            left = p.left
-            p.left = parent_right
-            parent_right = p.right
-            p.right = parent
-            parent = p
-            p = left
-        return parent
+    def dfsBottomUp(self, p, parent):
+        if p is None: return parent
+        root = self.dfsBottomUp(p.left, p)
+        if parent is None:
+            p.left = parent
+        else:
+            p.left = parent.right
+        p.right = parent
+        return root
+
+    def upsideDownBinaryTree(self, root: TreeNode) -> TreeNode:
+        return self.dfsBottomUp(root, None)
+
 
