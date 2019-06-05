@@ -7,17 +7,20 @@ This question is highly recursive in nature. Think of how binary search works.
 """
 
 
-class TreeNode(object):
+class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
 
 
-class Solution(object):
-    def sortedArrayToBST(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: TreeNode
-        """
-        pass
+class Solution:
+    def sortedArrayToBST(self, nums: 'List[int]') -> TreeNode:
+        if not nums:
+            return None
+
+        mid = len(nums) // 2
+        head = TreeNode(nums[mid])
+        head.left = self.sortedArrayToBST(nums[:mid])
+        head.right = self.sortedArrayToBST(nums[mid + 1:])
+        return head

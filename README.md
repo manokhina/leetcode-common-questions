@@ -2,6 +2,7 @@
 Python implementation of the problems from Clean Code Handbook - LeetCode 50 Common Interview Questions
 
 **Blocked** means that the problem is available only with Leetcode Premium
+
 **Verified/not verified** means that the problem solution was accepted/not 
 tested by Leetcode
 
