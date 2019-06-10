@@ -20,7 +20,7 @@ class Solution:
         q = l2
         curr = dummy
         carry = 0
-        while p is not None or q is not None:
+        while p or q:
             x = p.val if p is not None else 0
             y = q.val if q is not None else 0
             digit = carry + x + y

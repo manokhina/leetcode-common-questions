@@ -29,18 +29,26 @@ sum and does not go through root.
 """
 
 
-class TreeNode(object):
+class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
 
 
-class Solution(object):
-    def maxPathSum(self, root):
-        """
-        :type root: TreeNode
-        :rtype: int
-        """
-        pass
+class Solution:
+    def maxPathSum(self, root: TreeNode) -> int:
+        return max(self.exten_and_nonexten_sum(root))
 
+    def exten_and_nonexten_sum(self, root: TreeNode) -> int:
+        if not root:
+            return (float('-inf'), float('-inf'))
+        max_left_ex, max_left_nonex = self.exten_and_nonexten_sum(root.left)
+        max_right_ex, max_right_nonex = self.exten_and_nonexten_sum(root.right)
+        max_ex = max(root.val, root.val + max_left_ex, root.val + max_right_ex)
+        max_nonex = max(
+            max_ex,
+            root.val + max_left_ex + max_right_ex,
+            max_left_nonex,
+            max_right_nonex)
+        return (max_ex, max_nonex)

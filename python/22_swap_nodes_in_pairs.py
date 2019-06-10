@@ -23,7 +23,7 @@ class Solution:
         dummy.next = head
         p = head
         prev = dummy
-        while p is not None and p.next is not None:
+        while p and p.next:
             q = p.next
             r = p.next.next
             prev.next = q

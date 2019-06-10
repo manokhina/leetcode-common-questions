@@ -12,5 +12,32 @@ A: No.
 
 
 class Solution:
-    def evalRPN(self, tokens: 'List[str]') -> 'int':
-        pass
+    OPERATORS = {"+", "-", "*", "/"}
+
+    def evalRPN(self, tokens: 'List[str]') -> int:
+        stack = []
+        for token in tokens:
+            if token in Solution.OPERATORS:
+                y = stack.pop()
+                x = stack.pop()
+                stack.append(self.eval(x, y, token))
+            else:
+                stack.append(int(token))
+        return stack.pop()
+
+    def eval(self, x, y, operator) -> int:
+        if operator == "+":
+            return x + y
+        elif operator == "*":
+            return x * y
+        elif operator == "-":
+            return x - y
+        else:
+            return int(x / y)
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    print(sol.evalRPN(["4", "13", "5", "/", "+"]))
+    print(sol.evalRPN(["10", "6", "9", "3", "+", "-11", "*", "/", "*",
+                       "17", "+", "5", "+"]))

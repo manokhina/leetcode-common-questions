@@ -27,7 +27,7 @@ class Solution:
     def merge2Lists(self, l1, l2):
         dummyHead = ListNode(0)
         p = dummyHead
-        while l1 is not None and l2 is not None:
+        while l1 and l2:
             if l1.val < l2.val:
                 p.next = l1
                 l1 = l1.next

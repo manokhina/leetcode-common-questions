@@ -12,24 +12,47 @@ traverse the list while inserting nodes to the tree.
 """
 
 
-class ListNode(object):
+class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
 
 
-class TreeNode(object):
+class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
 
 
-class Solution(object):
+class Solution:
+
     def sortedListToBST(self, head):
-        """
-        :type head: ListNode
-        :rtype: TreeNode
-        """
-        pass
+        if not head:
+            return None
+
+        root = self.helper(head)
+        return root
+
+    def helper(self, head):
+        pre = None
+        slow = head
+        fast = head
+
+        while fast and fast.next:
+            pre = slow
+            slow = slow.next
+            fast = fast.next.next
+
+        root = TreeNode(slow.val)
+
+        if pre:
+            pre.next = None
+            left_root = self.helper(head)
+            root.left = left_root
+        if slow.next:
+            right_root = self.helper(slow.next)
+            root.right = right_root
+
+        return root
 

@@ -19,19 +19,19 @@ class MinStack:
         """
         initialize your data structure here.
         """
-        pass
+        self.stack = []
 
-    def push(self, x: 'int') -> 'None':
-        pass
+    def push(self, x: int) -> None:
+        self.stack.append(x)
 
-    def pop(self) -> 'None':
-        pass
+    def pop(self) -> None:
+        self.stack.pop() if self.stack else None
 
-    def top(self) -> 'int':
-        pass
+    def top(self) -> int:
+        return self.stack[-1] if self.stack else None
 
-    def getMin(self) -> 'int':
-        pass
+    def getMin(self) -> int:
+        return min(self.stack) if self.stack else None
 
 # Your MinStack object will be instantiated and called as such:
 # obj = MinStack()
