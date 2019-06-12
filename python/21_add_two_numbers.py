@@ -21,14 +21,16 @@ class Solution:
         curr = dummy
         carry = 0
         while p or q:
-            x = p.val if p is not None else 0
-            y = q.val if q is not None else 0
+            x = p.val if p else 0
+            y = q.val if q else 0
             digit = carry + x + y
             carry = digit // 10
             curr.next = ListNode(digit % 10)
             curr = curr.next
-            if p is not None: p = p.next
-            if q is not None: q = q.next
+            if p:
+                p = p.next
+            if q:
+                q = q.next
         if carry > 0:
             curr.next = ListNode(carry)
         return dummy.next
