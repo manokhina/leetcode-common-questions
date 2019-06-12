@@ -10,4 +10,12 @@ Here are few examples.
 
 class Solution:
     def searchInsert(self, nums: 'List[int]', target: 'int') -> 'int':
-        pass
+        L = 0
+        R = len(nums) - 1
+        while L < R:
+            M = (L + R) // 2
+            if nums[M] < target:
+                L = M + 1
+            else:
+                R = M
+        return L + 1 if nums[L] < target else L
