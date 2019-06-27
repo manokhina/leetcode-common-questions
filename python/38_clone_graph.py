@@ -15,4 +15,15 @@ class Solution:
     # @param node, a undirected graph node
     # @return a undirected graph node
     def cloneGraph(self, node):
-        pass
+        def dfs(v):
+            u = UndirectedGraphNode(v.val, [])
+            visited[v] = u
+            for ngh in v.neighbors:
+                if ngh not in visited:
+                    u.neighbors.append(dfs(ngh))
+                else:
+                    u.neighbors.append(visited[ngh])
+            return u
+
+        visited = {}
+        return dfs(node)

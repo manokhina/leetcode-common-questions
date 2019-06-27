@@ -4,5 +4,5 @@ cpp/.idea/
 cpp/CMakeLists.txt
 cpp/cmake-build-debug/
 cpp/main.cpp
-cpp/a.h
+cpp/*.h
 python/google*.py

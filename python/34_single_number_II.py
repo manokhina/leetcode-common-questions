@@ -10,4 +10,8 @@ it without using extra memory?
 
 class Solution:
     def singleNumber(self, nums: 'List[int]') -> 'int':
-        pass
+        a = b = 0
+        for num in nums:
+            b = (b ^ num) & ~a
+            a = (a ^ num) & ~b
+        return b

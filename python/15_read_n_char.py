@@ -11,4 +11,20 @@ Note: The read function will only be called once for each test case.
 
 class Solution:
     def read_n(self, buf, n):
-        pass
+        write = 0
+
+        temp_buf = [None] * 4
+        end_reached = False
+        while write < n and not end_reached:
+            this_size = read4(temp_buf)
+            if this_size < 4:
+                end_reached = True
+
+            for i in range(this_size):
+                buf[write] = temp_buf[i]
+                write += 1
+                if write == n:
+                    break
+
+        return write
+

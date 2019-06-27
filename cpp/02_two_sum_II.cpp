@@ -26,19 +26,14 @@ using namespace std;
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        vector<int> result;
-        int i = 0;
-        int j = nums.size() - 1;
-        while (i < j) {
-            if (nums[i] + nums[j] > target) {
-                j -= 1;
-            } else if (nums[i] + nums[j] < target) {
-                i += 1;
-            } else if (nums[i] + nums[j] == target) {
-                result.push_back(i + 1);
-                result.push_back(j + 1);
-                return result;
-            }
-        }
+        int fst = 0, lst = nums.size() - 1, res;
+        do {
+            res = nums[fst] + nums[lst];
+            if (target < res) --lst;
+            else if (target > res) ++fst;
+        } while (res != target);
+
+        vector<int> ret{++fst,++lst};
+        return ret;
     }
 };
