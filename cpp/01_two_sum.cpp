@@ -11,13 +11,14 @@
 //that maps a value to its index.
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 using namespace std;
 
 
 vector<int> twoSum(vector<int> &numbers, int target)
 {
     //Key is the number and value is its index in the vector.
-    unordered_map<int, int> hash;
+    std::unordered_map<int, int> hash;
     vector<int> result;
     for (int i = 0; i < numbers.size(); i++) {
         int numberToFind = target - numbers[i];
